@@ -1,0 +1,44 @@
+Task 1 AI augmentation record - 24 October 2026
+
+Scope: complete Task 1 after the user reviewed the existing as-built report.
+This is a summary of this session, not a fabricated verbatim transcript.
+
+User instructions: strictly follow the assignment; explain choices; keep the
+submission professional; continue Task 1 and do what is needed.
+
+Agent work: inspected AGENTS.md, ops/README.md, the project files, Program.cs
+and Domain source. Prepared target Mermaid sources, evidence mapping, failure
+handling assumptions, and a compiled-assembly architecture test.
+
+Design choice: transactional outbox plus SQL persistence and a background
+worker. Provisional pending Task 2's comparison. Did not claim an outbox alone
+provides exactly-once external processing. PayEx idempotency and lookup remain
+unverified. Service Bus remains unused with the scenario's planned topic noted.
+
+Correction to earlier draft: added explicit concurrency protection, audit
+retention controls, lost-response/worker-crash ambiguity, and separate approval
+and submission states. Recorded that IInvoiceRepository lacks a transaction
+contract and that existing local sessions do not establish production scaling.
+
+Execution limitations at preparation: no system .NET SDK; no callable Mermaid
+MCP in this chat. The user confirmed a separate terminal has Mermaid connected.
+The render instruction will use that connection without sharing credentials.
+
+The candidate should retain the actual Codex terminal conversation/tool log
+alongside this summary and review the proposal. This record does not assert
+that the candidate personally authored or independently verified every detail.
+
+Completion evidence:
+- The user kept the authenticated Codex terminal open and sent the rendering instruction supplied in this chat. That session updated task-1-target.html with two Mermaid MCP PNG renderings and escaped sequence semicolons as #59;. Both corrected sources match the report.
+- This session extracted and visually inspected all four embedded diagrams.
+- Installed Microsoft .NET SDK 8.0.426 in a dedicated user folder. The downloaded archive SHA-512 matched Microsoft's 8.0 release metadata.
+- Ran DomainArchitectureTests: 1 passed, 0 failed.
+- Added a temporary Task1ArchitectureProbe referencing HttpClient: the test failed with 'Found: System.Net.Http', as intended. Removed the probe in a finally block.
+- Ran the final solution suite: 8 passed, 0 failed, 0 skipped.
+- Preserved raw command output and TRX results. Git status shows only documentation and the new test; tracked application source is unchanged.
+- Updated completion status without claiming deployed, end-to-end, performance or PayEx contract verification.
+
+Rendering instruction supplied to the separate terminal:
+Read docs/diagrams/task-1-target.html and the two task-1-target-*.mmd files. Use the connected Mermaid MCP to validate and render both target diagrams. Preserve the architecture and evidence IDs. If syntax needs correction, update both the .mmd file and the matching source block in the report. Embed returned images in target-container-render and target-sequence-render; update render-status only after success. Do not change application code, tests or test-status. Report design concerns rather than silently changing the proposal.
+
+Submission wording update: At the user's request, removed drafting and pending candidate-review instructions from presentation documents where applicable. Preserved AI attribution, actual test evidence and unverified provider/implementation limitations. Linked Task 1 to the prepared Task 2 record. This editorial update does not claim independent candidate authorship or new technical verification.

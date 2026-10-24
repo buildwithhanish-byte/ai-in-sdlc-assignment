@@ -1,0 +1,11 @@
+Task 5 source clarification
+
+The assignment says to audit the agent setup at the end of ops/README.md. In the supplied checkout, that file ends with "No answers here" and contains no agent configuration or permission description.
+
+Please provide the intended setup, or confirm that the proposed first-response incident assistant documented in Task 3 may be used as the audit subject.
+
+For the measurement requirement, the accessible GitHub snapshot contains one CI run, no PRs and no deployment records. The supplied scenario packs include 20 CI timing runs and one incident release's author/deployment timestamps, but no PR review timings or complete production deployment/incident denominator.
+
+Please confirm which two measures are intended to be captured from this material, or provide the missing history. The submission already includes clearly labelled calculations from both live CI metadata and the supplied scenario evidence. It does not label CI failure fraction as production change-failure rate or step duration as review turnaround.
+
+This file is a prepared clarification request, not a message that has been sent.

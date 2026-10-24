@@ -1,0 +1,16 @@
+flowchart LR
+    user["Approver or Admin - existing role concept T1"]
+    browser["Browser UI - existing; submission-status display NEW T2"]
+    api["ASP.NET Core application - existing core; Azure App Service deployment and transaction handling NEW T3"]
+    sql[("Azure SQL - NEW: invoices, audit events, outbox and submission state T4")]
+    worker["Submission worker - NEW: leased outbox processing and reconciliation T5"]
+    payex["PayEx - external scenario service; integration NEW T6"]
+    archive[("Immutable audit archive - NEW proposed retention control T7")]
+    bus["Azure Service Bus - provisioned in scenario; UNUSED in this proposal T8"]
+    user -->|"Use approval UI T1"| browser
+    browser -->|"Authenticated HTTPS; read approval and submission state T2"| api
+    api -->|"One SQL transaction: approval, audit event and outbox intent T4"| sql
+    worker -->|"Lease work; persist outcomes and retry state T5"| sql
+    worker -->|"Submit immutable payload with stable operation key; provider support unverified T6"| payex
+    payex -->|"Reference, explicit rejection or uncertain timeout T6"| worker
+    worker -->|"Export audit events; verify completeness before eligible cleanup T7"| archive

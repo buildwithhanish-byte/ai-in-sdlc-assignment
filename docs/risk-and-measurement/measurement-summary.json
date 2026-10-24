@@ -1,0 +1,19 @@
+{
+  "captured_utc": "2026-10-24T17:17:20.407058+00:00",
+  "workflow_run_id": 38544149767,
+  "run_url": "https://github.com/NITIN1670/ai-in-sdlc-assignment/actions/runs/38544149767",
+  "start_utc": "2026-10-14T09:41:04Z",
+  "last_update_utc": "2026-10-14T09:41:35Z",
+  "start_to_last_update_seconds": 31.0,
+  "completed_ci_runs": 1,
+  "failed_ci_runs": 0,
+  "pull_requests_returned": 0,
+  "deployment_records_returned": 0,
+  "raw_hashes_verified": true,
+  "required_delivery_metrics": {
+    "production_change_lead_time": "unavailable: no deployment mapping",
+    "production_change_failure_rate": "unavailable: no deployment denominator or linked incident record",
+    "review_turnaround": "unavailable: no pull requests"
+  },
+  "claim": "Two supplementary observations, not a substitute for two requested delivery baselines"
+}

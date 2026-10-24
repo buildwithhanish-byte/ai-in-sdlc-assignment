@@ -1,0 +1,15 @@
+Task 3 AI augmentation summary - 24 October 2026
+This is a summary, not a verbatim transcript. Retain the original chat.
+
+User request: proceed with Task 3 and use natural language.
+Workflow: first-response incident summaries, proposed by the assistant and accepted through the request to proceed.
+Sources: assignment Task 3 previously read in this conversation; repository AGENTS.md; ops/incidents/INC-2047/README.md and alert.md.
+The incident pack describes a planned system, not implemented runtime capabilities.
+
+Agent contribution: drafted a one-page HTML policy defining human-only decisions, reviewed private drafting on day one, and a possible later alert-triggered private drafting level. Specified permission controls, evidence citations, handling of untrusted log instructions, retention boundaries, promotion evidence, approvers and suspension rules.
+The three levels are local policy definitions, not a claimed external standard.
+The 20-summary, two-rotation trial and final-ten quality gate are proposed acceptance criteria, not assignment-mandated numbers or measured results. The service engineering lead, on-call lead and security/data-owner responsibilities are proposed governance roles, not named real appointments.
+
+No incident summaries were published, no production tools were configured, and no trial or evaluation was run. The controls remain proposals to implement before use. The candidate should review the wording and be able to explain the day-one restriction and promotion gates.
+
+Candidate review update: The user confirmed in chat that they had read and reviewed the policy and requested the submission footer update. Removed the pending candidate-review wording from the footer, preserving AI disclosure and the distinction between proposed controls and implemented/tested controls.

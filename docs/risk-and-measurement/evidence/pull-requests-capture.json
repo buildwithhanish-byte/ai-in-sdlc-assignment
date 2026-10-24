@@ -1,0 +1,7 @@
+{
+  "url": "https://api.github.com/repos/NITIN1670/ai-in-sdlc-assignment/pulls?state=all&per_page=100",
+  "captured_utc": "2026-10-24T17:17:20.721014+00:00",
+  "http_status": 200,
+  "pagination_link": "",
+  "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}

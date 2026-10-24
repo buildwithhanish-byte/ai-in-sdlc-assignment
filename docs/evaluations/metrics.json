@@ -1,0 +1,84 @@
+{
+  "primary": {
+    "run-1": {
+      "caught": 8,
+      "missed": 1,
+      "false_alarm": 0,
+      "clean": 3,
+      "defective": 9,
+      "clean_cases": 3
+    },
+    "run-2": {
+      "caught": 8,
+      "missed": 1,
+      "false_alarm": 0,
+      "clean": 3,
+      "defective": 9,
+      "clean_cases": 3
+    },
+    "run-3": {
+      "caught": 8,
+      "missed": 1,
+      "false_alarm": 0,
+      "clean": 3,
+      "defective": 9,
+      "clean_cases": 3
+    },
+    "run-4": {
+      "caught": 6,
+      "missed": 3,
+      "false_alarm": 0,
+      "clean": 3,
+      "defective": 9,
+      "clean_cases": 3
+    },
+    "baseline-pooled": {
+      "caught": 24,
+      "missed": 3,
+      "false_alarm": 0,
+      "clean": 9,
+      "defective": 27,
+      "clean_cases": 9
+    }
+  },
+  "sensitivity": {
+    "run-1": {
+      "caught": 5,
+      "missed": 0,
+      "false_alarm": 0,
+      "clean": 3,
+      "defective": 5,
+      "clean_cases": 3
+    },
+    "run-2": {
+      "caught": 5,
+      "missed": 0,
+      "false_alarm": 0,
+      "clean": 3,
+      "defective": 5,
+      "clean_cases": 3
+    },
+    "run-3": {
+      "caught": 5,
+      "missed": 0,
+      "false_alarm": 0,
+      "clean": 3,
+      "defective": 5,
+      "clean_cases": 3
+    },
+    "run-4": {
+      "caught": 5,
+      "missed": 0,
+      "false_alarm": 0,
+      "clean": 3,
+      "defective": 5,
+      "clean_cases": 3
+    }
+  },
+  "reported_usage": {
+    "input_tokens": 795050,
+    "cached_input_tokens": 499072,
+    "output_tokens": 10138,
+    "reasoning_output_tokens": 4492
+  }
+}

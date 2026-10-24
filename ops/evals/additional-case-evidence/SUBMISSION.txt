@@ -1,0 +1,7 @@
+Submission packaging
+
+The archive contains the complete reproduction scripts, frozen source snapshots, corrected copy, review baseline/candidates, test results and invalid-attempt history. Build binaries and caches are excluded. Every archived source/evidence file was compared byte-for-byte with its local original.
+
+For reproduction, extract reproduction-evidence.zip into this same additional-case-evidence directory in a fresh checkout, then follow commands.txt. The archive contains the original .gitignore and README. The ordinary working copies are still on the author machine but ignored by Git; no evidence was deleted.
+
+case-11.diff and case-12.diff remain in ../cases/. Task 4 review results are in docs/evaluations/task-4-review-evaluation.html.

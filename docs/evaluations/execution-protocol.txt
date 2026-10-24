@@ -1,0 +1,28 @@
+Execution protocol, frozen for the 48 case reviews
+
+Reviewer: configured gpt-6-astra, medium reasoning, Codex CLI 0.164.0.
+Model alias is recorded, not an immutable backend snapshot; service-side routing cannot be independently verified.
+Fresh non-interactive process and empty temporary working folder per case. No resume, no inherited conversation, no repository instructions (project_doc_max_bytes=0), user config ignored, host skill discovery disabled, local plugins/apps and shell/browser/memory/multi-agent features disabled. Standard Codex system/developer and managed enterprise instructions still apply. This is a Codex-harness evaluation, not a bare-model experiment.
+Each stdin input is exactly the selected saved prompt plus that case diff. The grader's key and other cases are never supplied. Raw event logs are checked for external tool use; any tool use or execution failure stops the runner rather than silently producing a score.
+
+Unscored pilot: response READY, no tool calls. It exposed a managed approval-policy fallback; actual case runs explicitly request the allowed on-request policy. The read-only sandbox is retained. No enterprise safeguards were bypassed. A PowerShell shell-snapshot warning is recorded; it did not prevent completion and shell tools are disabled.
+Run order: case-01 through case-12, sequentially for runs 1, 2, 3 (v1), then run 4 (v2). Identical order and settings. Fresh sessions remove conversation carryover; same order means time/order effects cannot be fully ruled out. No valid outputs are selectively rerun.
+
+Key limitations fixed before results:
+- No instructor answer key exists in this checkout. Labels are provisional AI-assisted adjudication, not independently human-validated ground truth.
+- Nine defective labels and three clean labels. Cases 03, 05, 07 and 09 depend on rounding policy or omitted system context. Publish a sensitivity view excluding these four as well as primary results.
+- The ten supplied cases describe illustrative versions, not patches to apply directly to this checkout. Do not score invented compile errors simply because a diff's API differs from current source.
+- Cases 11 and 12 are a related pair from one actual source-level reproduction during this assignment, not two past work incidents. Their added fixture contract makes their context richer than many supplied diffs; scores are not directly comparable in difficulty.
+- For case 07 broad invoice/session logging is the risk; the current UserSession source has only Username and Role. A specific token/password disclosure claim needs additional evidence and will be noted as unsupported.
+- A clean-case style suggestion is not a false alarm. Defective-case extra incorrect findings are tracked separately so a caught score does not hide them.
+- At most 12 unique cases and 3 clean examples. Repeated passes do not increase the number of independent defects. Report numerators/denominators, descriptive differences and low confidence in generalisation, not statistical proof of improvement.
+
+References for execution setup:
+https://learn.chatgpt.com/docs/non-interactive-mode
+https://learn.chatgpt.com/docs/developer-commands
+Local codex exec --help and codex features list were checked.
+
+Execution amendment after run 1 case 09, before any rerun:
+The runner stopped because the reviewer invoked builtin resource discovery despite the disabled external integrations. Both results were exactly empty resource/template lists. It received no project context. Preserve this original response and score it as a miss under the frozen case-09 key; do not rerun it. Its original run.json status remains invalid_or_failed as the historical runner verdict, with this explicit adjudication for analytical inclusion.
+For subsequent runs, the harness accepts only these same empty discovery results while still stopping on any substantive external tool access or execution failure. No reviewer model, command flags, prompt or case inputs changed. This is a validation-policy amendment, not a model treatment change; all such attempts are reported and raw events retained. Results are therefore isolated from repository content, but not strictly tool-free.
+Managed approval warning persisted even with on-request on the CLI: exec reported fallback to the enterprise-required UnlessTrusted policy. Do not claim the explicit flag removed that warning; managed controls remained active. No permissions were weakened.

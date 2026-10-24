@@ -1,0 +1,16 @@
+{
+  "verified_utc": "2026-10-24T17:11:34.367487+00:00",
+  "completed_reviews": 48,
+  "unique_session_ids": 48,
+  "case_and_prompt_hashes_match": true,
+  "frozen_key_hash_matches": true,
+  "empty_resource_discovery_runs": [
+    "run 1, case-09",
+    "run 2, case-09",
+    "run 3, case-06",
+    "run 3, case-09"
+  ],
+  "substantive_external_context_reads": 0,
+  "archive_sha256": "b5e1cbf3ef1a6731e910310e4f765d6e0507f4248eb80e3c96fc1471f0137fd8",
+  "results_sha256": "95bf4fca044238ae226c6b84eb7ba9f010e1e038e641c679b38bf4301f207cfc"
+}

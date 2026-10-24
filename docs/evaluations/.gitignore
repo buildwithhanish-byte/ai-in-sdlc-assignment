@@ -1,0 +1,3 @@
+# Local execution files are preserved in raw-review-evidence.zip for submission.
+raw/
+__pycache__/

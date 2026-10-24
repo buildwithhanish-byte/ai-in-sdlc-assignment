@@ -1,0 +1,9 @@
+flowchart LR
+    U["User: Approver or Admin<br/>C1"]
+    subgraph APP["Invoice approval demo — logical system boundary C2"]
+        B["Browser UI container<br/>HTML, CSS, JavaScript<br/>Session in sessionStorage<br/>C3"]
+        A["ASP.NET Core 8 application container<br/>Static file hosting and HTTP API<br/>AuthController, InvoicesController, ApprovalsController<br/>SessionAuthMiddleware and RequireRoleAttribute<br/>ApprovalService domain library<br/>Singleton in-memory invoices and sessions<br/>C4"]
+    end
+    U -->|"Sign in, submit, approve or reject — C5"| B
+    B -->|"HTTP: static files and JSON API requests<br/>Bearer token on signed-in API calls — C6"| A
+    A -->|"HTML / CSS / JS; JSON or HTTP status<br/>Login returns opaque token — C7"| B

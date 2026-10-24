@@ -1,0 +1,5 @@
+Review this diff for defects. For each finding give the file, the line, what
+goes wrong, and how confident you are. If you find nothing, say so
+explicitly rather than listing general observations.
+
+Before reporting a defect, check that the diff supports a concrete failure scenario. State the triggering input or condition and the resulting incorrect behaviour. Do not assume missing surrounding code is defective; distinguish uncertainty from a demonstrated defect.

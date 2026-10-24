@@ -1,0 +1,66 @@
+sequenceDiagram
+    autonumber
+    actor U as Approver - existing T1
+    participant B as Browser - existing#59; status display NEW T2
+    participant A as API - transaction handling NEW T3
+    participant D as Azure SQL - NEW T4
+    participant W as Submission worker - NEW T5
+    participant P as PayEx - integration NEW T6
+    U->>B: Approve invoice T1
+    B->>A: Authenticated approval request T2
+    A->>A: Check identity and role using existing guards T1
+    A->>A: Resolve and retain stable operation identity for invoice/version T3 T4
+    A->>D: Begin transaction#59; conditional PendingApproval update with version check T4
+    alt Missing invoice or conflicting state/version
+        D-->>A: No eligible invoice#59; roll back T4
+        A-->>B: 404 or 409#59; no submission intent committed T3
+    else Eligible invoice
+        A->>D: Append audit event and unique outbox operation using that identity and payload snapshot T4
+        A->>D: Commit approval, audit event and outbox intent T4
+        alt Confirmed transaction failure T4
+            D-->>A: Transaction failed and rolled back#59; no intent committed T4
+            A-->>B: Approval failed#59; any retry retains operation identity T3
+        else Commit confirmed T4
+            D-->>A: Approval, audit event and submission intent are durable T4
+            A-->>B: Approved#59; submission Pending, not Paid T2
+        else Commit outcome unknown - acknowledgement lost T3 T4
+            Note over A,D: Do not assume rollback or create a fresh submission key T3 T4
+            A->>D: Read durable invoice and outbox state using the same operation identity T4
+            alt Committed decision and matching outbox operation found T4
+                D-->>A: Durable approval and current submission state T4
+                A-->>B: Approved#59; return existing submission state without a new intent T2 T3
+            else Definitively not committed and invoice still eligible T4
+                D-->>A: No committed operation#59; transaction resolved and version eligible T4
+                A-->>B: Retry permitted using same operation identity and payload T3
+                Note over A,D: Retry re-enters conditional transaction with same unique key T3 T4
+            else Read unavailable, transaction unresolved, or conflicting state T4
+                D-->>A: Outcome unresolved or invoice conflicts T4
+                A-->>B: Do not retry approval yet#59; reconcile using the same identity T3
+            end
+        end
+    end
+    opt Durable approval and matching outbox intent exist T4 T5
+        W->>D: Atomically claim due work with expiring lease T5
+        D-->>W: Stable operation key and immutable payload T5
+        W->>P: Submit invoice using operation key T6
+        alt Confirmed success
+            P-->>W: PayEx reference T6
+            W->>D: Mark submission Confirmed#59; persist reference and audit event T5
+        else Explicit terminal rejection
+            P-->>W: Rejection details T6
+            W->>D: Mark Failed#59; record reason and raise actionable alert T5
+        else Timeout, disconnect, or crash after send before recording result
+            W->>D: Mark Unknown, or recover expired lease as uncertain T5
+            alt Verified provider idempotency and valid deduplication window
+                W->>P: Retry same operation key and payload with bounded backoff T6
+            else Verified lookup or reconciliation evidence available
+                W->>P: Query by stable operation identity before deciding whether to resend T6
+            else Provider capabilities not verified
+                W->>D: Hold Unknown for operator resolution#59; no blind resend T5
+            end
+        end
+        B->>A: Refresh invoice and submission status T2
+        A->>D: Read current durable state T4
+        D-->>A: Invoice and submission status T4
+        A-->>B: Display approval separately from PayEx outcome T2
+    end

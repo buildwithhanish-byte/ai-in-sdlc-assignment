@@ -1,0 +1,24 @@
+Task 2 AI augmentation summary - 24 October 2026
+This is a summary, not a verbatim transcript. Preserve the original chat.
+
+The user requested help completing Task 2 in simple language and then asked for the documentation to be assembled.
+The assistant read the assignment and repository scenario. It compared idempotency keys plus a dedupe table, an outbox plus worker, and optimistic submission plus nightly reconciliation.
+Initial agent preference: outbox plus stable operation identity, conditional on verified PayEx capabilities.
+
+Actual preference challenge submitted by the user:
+I prefer idempotency keys with a dedupe table because our six-person team should avoid the complexity of a worker. Why isn't that enough? Would you change your recommendation?
+Outcome: recommendation stayed the same, with recovery complexity and team support burden made explicit.
+
+Actual failure challenge submitted by the user:
+How does this design fail at 3 a.m. on the last day of the month, and what would the on-call engineer do?
+Outcome: examined provider timeouts, worker crashes, unavailable SQL, stopped workers and growing backlogs. No recovery exercise was executed.
+
+Cost discussion: the assistant supplied build/run cost categories after the user acknowledged the process. The user did not independently send a separate cost-challenge prompt. At documentation time the assistant added an illustrative 13-22 engineer-day incremental range, its exclusions and uncertainty, and a running-cost model. These are agent estimates, not measured costs or candidate estimates.
+
+The user asked the assistant to draft the problem statement and subsequent wording naturally. The assistant supplied draft text and then assembled the HTML working document. It remains labelled AI-assisted and pending candidate review; no claim of independent candidate authorship is made.
+
+Specific weaknesses recorded: fragmented guidance confused the user; initial cost answer lacked estimates/model; earlier Task 1 sequence omitted explicit lost commit acknowledgement; provider capability assumptions remain unverified.
+
+No new application code, PayEx integration, provider experiment or runtime test was performed for Task 2. Existing Task 1 tests do not validate this proposed distributed workflow.
+
+Submission wording update: At the user's request, removed drafting and pending candidate-review instructions from presentation documents where applicable. Preserved AI attribution, actual test evidence and unverified provider/implementation limitations. Linked Task 1 to the prepared Task 2 record. This editorial update does not claim independent candidate authorship or new technical verification.

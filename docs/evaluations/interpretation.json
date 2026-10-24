@@ -1,0 +1,9 @@
+{
+  "paragraphs": [
+    "Under the provisional key, each baseline run caught 8 of 9 defects (88.9%), missed 1 of 9 (11.1%), and raised no false alarms on 3 clean cases. Across three baseline runs that is 24/27 caught, 3/27 missed and 0/9 false alarms. Those are repeated reviews of the same cases, not new independent samples.",
+    "The changed prompt caught 6 of 9 defects (66.7%), missed 3 of 9 (33.3%), and again raised no false alarms on 3 clean cases. Its caught rate was 22.2 percentage points lower than the baseline rate. Cases 05 and 07 changed from caught to missed; case 09 was missed in every run. All other case verdicts stayed the same.",
+    "I would not claim an improvement from this prompt change. It made the reviewer more conservative about omitted authorization and logging context, without reducing the observed false alarm count because the baseline already had none. Under this key it lost recall. The cautious responses themselves are defensible given the restricted inputs, which limits the strength of that conclusion.",
+    "Excluding the four context-sensitive cases, every pass caught all five remaining defects and correctly left all three clean cases unflagged. The comparison therefore gives no evidence of a difference on that smaller subset. It does not establish that the prompts are equivalent or reliably safe.",
+    "Confidence in generalisation is low. One clean-case error would change a per-run false alarm rate by 33.3 percentage points. There are only three clean examples, the added pair shares one origin, labels were AI-assisted, and the changed prompt was run only once. A sensible next experiment is a larger independently labelled holdout set with realistic context, tested separately rather than changing this completed experiment."
+  ]
+}

@@ -1,0 +1,49 @@
+run,case,model,prompt_version,verdict,finding_summary,confidence_reported,notes,execution_status,raw_output_path
+1,case-01,gpt-6-astra,v1,caught,Identified null Ids enumeration and a concrete request causing failure.,high,,completed,raw/run-1/case-01/response.txt
+1,case-02,gpt-6-astra,v1,caught,Identified SQL injection through customer/status interpolation.,high,,completed,raw/run-1/case-02/response.txt
+1,case-03,gpt-6-astra,v1,caught,Explained truncation and supplied correct changed-total examples.,high,Policy-dependent expected label.,completed,raw/run-1/case-03/response.txt
+1,case-04,gpt-6-astra,v1,clean,Recognised consistent rename with unchanged behaviour.,high,,completed,raw/run-1/case-04/response.txt
+1,case-05,gpt-6-astra,v1,caught,"Identified missing Admin restriction, explicitly conditional on unseen authorization.",medium,Context-sensitive label; appropriately qualified.,completed,raw/run-1/case-05/response.txt
+1,case-06,gpt-6-astra,v1,clean,No concrete defect found in added tests.,moderate,,completed,raw/run-1/case-06/response.txt
+1,case-07,gpt-6-astra,v1,caught,Identified whole-object data logging; qualified destructuring and unknown fields.,medium,No specific secret exposure asserted.,completed,raw/run-1/case-07/response.txt
+1,case-08,gpt-6-astra,v1,caught,Identified unsafe Dictionary access and duplicate-add race.,high,,completed,raw/run-1/case-08/response.txt
+1,case-09,gpt-6-astra,v1,missed,Could not verify the reset-on-login README claim and reported no confirmed defect.,not stated,"Empty resource discovery only; original response retained, no rerun. Context-sensitive label.",completed; empty discovery only,raw/run-1/case-09/response.txt
+1,case-10,gpt-6-astra,v1,caught,Identified catch-all HTTP 200 falsely reporting failed work as completed.,high,,completed,raw/run-1/case-10/response.txt
+1,case-11,gpt-6-astra,v1,caught,"Explained both requests passing pending check, then overwriting decision fields.",very high,,completed,raw/run-1/case-11/response.txt
+1,case-12,gpt-6-astra,v1,clean,Recognised shared-object lock and in-lock recheck under fixture scope.,high,,completed,raw/run-1/case-12/response.txt
+2,case-01,gpt-6-astra,v1,caught,Identified nullable Ids causing unhandled foreach exception.,high,Diff-only scope noted.,completed,raw/run-2/case-01/response.txt
+2,case-02,gpt-6-astra,v1,caught,Identified interpolated SQL injection and apostrophe syntax failure.,high,,completed,raw/run-2/case-02/response.txt
+2,case-03,gpt-6-astra,v1,caught,Correct numerical example of truncation overcharging by one cent.,high,Policy-dependent expected label.,completed,raw/run-2/case-03/response.txt
+2,case-04,gpt-6-astra,v1,clean,Recognised consistent rename without behaviour change.,high,,completed,raw/run-2/case-04/response.txt
+2,case-05,gpt-6-astra,v1,caught,Flagged missing deletion role guard with explicit caveat about broader authorization.,medium,Context-sensitive label.,completed,raw/run-2/case-05/response.txt
+2,case-06,gpt-6-astra,v1,clean,No defect found in added tests; limited review to shown changes.,not stated,,completed,raw/run-2/case-06/response.txt
+2,case-07,gpt-6-astra,v1,caught,Identified whole-object invoice/user information logging under a destructuring provider.,high,Context-sensitive data-exposure label; no specific token asserted.,completed,raw/run-2/case-07/response.txt
+2,case-08,gpt-6-astra,v1,caught,Identified concurrent Dictionary access and non-atomic duplicate insertion.,high,,completed,raw/run-2/case-08/response.txt
+2,case-09,gpt-6-astra,v1,missed,Reported no confirmed defect because README reset claim could not be verified from diff.,not stated,Context-sensitive label; do not interpret as general code-review failure.,completed; empty discovery only,raw/run-2/case-09/response.txt
+2,case-10,gpt-6-astra,v1,caught,Identified unexpected exceptions being reported as completed HTTP 200.,very high,,completed,raw/run-2/case-10/response.txt
+2,case-11,gpt-6-astra,v1,caught,Explained two pending checks succeeding and conflicting decision metadata.,high,,completed,raw/run-2/case-11/response.txt
+2,case-12,gpt-6-astra,v1,clean,No introduced defect under explicit fixture contract.,high,,completed,raw/run-2/case-12/response.txt
+3,case-01,gpt-6-astra,v1,caught,Identified absent/null Ids reaching foreach and throwing.,high,,completed,raw/run-3/case-01/response.txt
+3,case-02,gpt-6-astra,v1,caught,Identified SQL injection and apostrophe-related query failure.,high,,completed,raw/run-3/case-02/response.txt
+3,case-03,gpt-6-astra,v1,caught,Correct example of intermediate truncation increasing invoice total.,high,Explicitly allowed possibility of intentional policy change.,completed,raw/run-3/case-03/response.txt
+3,case-04,gpt-6-astra,v1,clean,Consistent rename; no runtime behaviour change.,high,,completed,raw/run-3/case-04/response.txt
+3,case-05,gpt-6-astra,v1,caught,Identified potential missing Admin authorization with explicit omitted-context caveat.,medium,Context-sensitive key.,completed,raw/run-3/case-05/response.txt
+3,case-06,gpt-6-astra,v1,clean,No concrete defect in supplied tests.,moderate,,completed; empty discovery only,raw/run-3/case-06/response.txt
+3,case-07,gpt-6-astra,v1,caught,Identified broad invoice/current-user logging and qualified actual exposure.,medium,No unverified specific secret asserted.,completed,raw/run-3/case-07/response.txt
+3,case-08,gpt-6-astra,v1,caught,Explained loss of thread safety and duplicate-add overwrite race.,high,,completed,raw/run-3/case-08/response.txt
+3,case-09,gpt-6-astra,v1,missed,Flagged README claim as unverified but did not identify it as an actual defect.,not stated,Strict scoring: uncertainty alone is not a caught finding; context-sensitive key.,completed; empty discovery only,raw/run-3/case-09/response.txt
+3,case-10,gpt-6-astra,v1,caught,Identified unexpected failures converted into false HTTP 200 success.,high,,completed,raw/run-3/case-10/response.txt
+3,case-11,gpt-6-astra,v1,caught,Explained non-atomic pending check and mutation causing duplicate decisions.,high,,completed,raw/run-3/case-11/response.txt
+3,case-12,gpt-6-astra,v1,clean,Recognised in-lock guard serializes shared-object decisions.,high,,completed,raw/run-3/case-12/response.txt
+4,case-01,gpt-6-astra,v2,caught,Identified nullable Ids input causing foreach exception.,high,,completed,raw/run-4/case-01/response.txt
+4,case-02,gpt-6-astra,v2,caught,Concrete SQL injection payload and ordinary apostrophe failure identified.,high,,completed,raw/run-4/case-02/response.txt
+4,case-03,gpt-6-astra,v2,caught,Correct one-cent numerical regression; distinguished behaviour from policy intent.,high,Policy-dependent label.,completed,raw/run-4/case-03/response.txt
+4,case-04,gpt-6-astra,v2,clean,No concrete failure in consistent field/parameter rename.,not stated,,completed,raw/run-4/case-04/response.txt
+4,case-05,gpt-6-astra,v2,missed,Declined missing-role finding without inherited policies and intended permissions.,not stated,Context-sensitive key; conservative response is defensible from diff alone.,completed,raw/run-4/case-05/response.txt
+4,case-06,gpt-6-astra,v2,clean,No demonstrated defect in added tests; implementation unavailable.,not stated,,completed,raw/run-4/case-06/response.txt
+4,case-07,gpt-6-astra,v2,missed,Noted possible logging exposure but declined defect without fields/provider details.,not stated,Strict scoring: unconfirmed risk not counted as caught. Context-sensitive label.,completed,raw/run-4/case-07/response.txt
+4,case-08,gpt-6-astra,v2,caught,Identified ContainsKey/write race and unsupported concurrent Dictionary access.,high,Explicitly conditional on shared concurrent use.,completed,raw/run-4/case-08/response.txt
+4,case-09,gpt-6-astra,v2,missed,Declined to confirm reset-on-login documentation defect without implementation.,not stated,Context-sensitive label.,completed,raw/run-4/case-09/response.txt
+4,case-10,gpt-6-astra,v2,caught,Explained unexpected exception mapped to false HTTP 200 completed.,high,,completed,raw/run-4/case-10/response.txt
+4,case-11,gpt-6-astra,v2,caught,Explained both pending checks succeeding and conflicting mutations.,high,,completed,raw/run-4/case-11/response.txt
+4,case-12,gpt-6-astra,v2,clean,No demonstrated defect under scoped shared-object contract.,not stated,,completed,raw/run-4/case-12/response.txt

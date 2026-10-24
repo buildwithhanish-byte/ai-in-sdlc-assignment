@@ -1,0 +1,19 @@
+Task 4 - Review evaluation plan
+Status: executed. All 48 reviews are complete; see task-4-review-evaluation.html, results.csv and verification.json. The protocol below records the planned method; execution-protocol.txt records the empty-discovery amendment.
+
+Use the ten unchanged diffs in ops/evals/cases plus two candidate-supplied cases. At least one added case must be clean. Record the real incident behind the added cases without confidential details; do not present invented cases as personal experience. A defective change and its corrected counterpart may provide a useful pair, but document that their results are correlated.
+
+Before the first run, manually inspect the cases and freeze a provisional scoring key: clean/defective, specific expected defect, failure trigger, supporting lines and rationale. The repository provides no official answer key. Mark ambiguous labels explicitly and explain any effect on results. Keep the key out of reviewer inputs.
+
+Use one fresh reviewer session per case. Supply only the prompt and diff, as required by ops/evals/README.md. Do not supply this plan, the answer key, AGENTS.md, previous outputs or other cases. Use an isolated execution directory without repository context, no inherited conversation and no tool access to the project. Record any unavoidable platform instructions and resulting limitations.
+
+Record the actual model identifier, reasoning setting, tool/config settings and prompt hash. Freeze these for all runs. Runs 1, 2 and 3 use prompt-v1.txt; run 4 uses prompt-v2.txt. The prompt is the only intentional change. The agent predicts that the added evidence requirement may reduce false alarms but could also miss real defects; this is a hypothesis, not a result. Freeze v2 before seeing baseline results.
+
+Preserve raw outputs separately by run/case. Keep execution failures distinct from valid no-finding responses. Do not silently score failures as misses or rerun only unfavourable outputs. Record retries and the rule used to include them.
+
+Score a defective case caught only when the output identifies a real defect with the correct reasoning. Otherwise mark missed. For a clean case, an asserted defect is a false alarm; harmless style advice is not. Mark correct clean reviews clean. Record unsupported extra findings even when the case's main verdict is caught.
+
+For each run report caught / defective cases, missed / defective cases, and false alarms / clean cases, with numerator and denominator. Report baseline per-run rates and pooled counts across all three runs, alongside run 4. Repeated reviews of the same cases are correlated, not independent new defect samples. Discuss case-level changes and variability; do not claim general improvement from one changed-prompt pass over this small set.
+
+results.csv now contains all 48 scored outcomes. Actual responses, run metadata and inputs are preserved in raw-review-evidence.zip. The report discloses provisional labels, context limitations and the related added cases.
+

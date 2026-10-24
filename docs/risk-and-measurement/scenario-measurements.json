@@ -1,0 +1,20 @@
+{
+  "classification": "Computed from invented scenario evidence; not observed live production",
+  "pipeline_source": "ops/pipeline/run-timings.csv",
+  "pipeline_source_sha256": "7e9c376f2cde6738cbd56b56c578931cc0c8a2580c93724f54cafe7b5fd87353",
+  "run_count": 20,
+  "recorded_step_rows": 378,
+  "median_sum_recorded_step_seconds": 1875.5,
+  "failed_runs": 2,
+  "release_author_to_deploy_seconds": 59752.0,
+  "release_sample_size": 1,
+  "release_start_source": "ops/incidents/INC-2041/deploy-diff.patch: Date header",
+  "release_end_source": "ops/incidents/INC-2041/alert.md: release at 09:58Z on 14 January 2026",
+  "limitations": [
+    "Patch Date is an author timestamp, not independently verified commit/merge time.",
+    "The sample was selected as an incident; it is not representative of release performance.",
+    "Summed steps omit queue time and any gaps; failed runs may stop early.",
+    "CI failure counts are not production change-failure rate.",
+    "No review timestamps or complete deployment denominator are available."
+  ]
+}

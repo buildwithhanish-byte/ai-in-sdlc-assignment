@@ -1,0 +1,26 @@
+{
+  "started_utc": "2026-10-24T16:56:43.894436+00:00",
+  "model": "gpt-6-astra",
+  "reasoning": "medium",
+  "only_changed_variable": "prompt v1 to v2 in run 4",
+  "case_hashes": {
+    "case-01.diff": "f7997398d3ee726cc15beb9750c3b9a3068c100b69c020160c97bebdef5a5bfd",
+    "case-02.diff": "033f1f36991c1c567ea8570b2c3b59e7e13a552ac41ce16438d5f9bcc4238b30",
+    "case-03.diff": "25e55324434d2d906b7075a89c598ac6dd765f760e59478c310511a2dd788e57",
+    "case-04.diff": "029c1e1ce2a1d678e70a0d4fd8fcfc41e288b9660da12a383a02d97756310de3",
+    "case-05.diff": "a4907ca7d4f8841cba6105188be51f77deaa808594df235f1e9c309244599242",
+    "case-06.diff": "42f68cb1c70e11b8d0d443d88928e7453baa752af257de1c0c3a78e9b24079d4",
+    "case-07.diff": "6d98dda6f579f215a3322dc742dedb6a3c4dcc9d0f0373ed7ea4587d0d09107a",
+    "case-08.diff": "65aee88e0744ffe2099886981e0b70dd5e3eaa6cb7c91e0cf45d69894ca8b478",
+    "case-09.diff": "57a944dd51a236fab2a1dad2d6bb777f39a2dc7f4d4108b6bec306dd267af2d0",
+    "case-10.diff": "cc3eeca9e5a2089858e0a52a06ae64bd71f5905d985502e4cee9c954a7e05ddc",
+    "case-11.diff": "e0002d8e1b4e9ba4801bb00087edb115dcf5cab638f294860929cf8ba23f44d2",
+    "case-12.diff": "d2c51e1744ac55996a95a77ef9a862c225d50d42bd9e2cf6f4dc8aecee7578ee"
+  },
+  "prompt_hashes": {
+    "v1": "893e249712448074579f4df3a4fb7577b1731e2f570733ea7cad9706b9bdb916",
+    "v2": "61e23ef714897baa6907baed6bb5549505b40c6ca42d97081b159184ccf3ffac"
+  },
+  "retry_policy": "Stop on execution failure; retain failed attempt; retry only failure, never selective valid outputs.",
+  "answer_key_sha256": "767133fa4cccaa2dc81cddf11eb23f627dea85f7ed1d210de1f5a83743c6e6a5"
+}
