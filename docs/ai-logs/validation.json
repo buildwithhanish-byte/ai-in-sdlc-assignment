@@ -1,0 +1,17 @@
+{
+  "record_count": 54,
+  "retrospective_summary_count": 5,
+  "normalized_automatic_capture_count": 49,
+  "scored_reviews": 48,
+  "unscored_pilot": 1,
+  "source_archive_sha256": "b5e1cbf3ef1a6731e910310e4f765d6e0507f4248eb80e3c96fc1471f0137fd8",
+  "jsonl_sha256": "5d731ca4665e62135d95dbf7799cc3099150d1368aa96f9b152774246dd6d543",
+  "checks": [
+    "JSON parse and required fields",
+    "Unique record IDs",
+    "49 input hashes match saved metadata",
+    "Archive integrity",
+    "Artifact paths exist"
+  ],
+  "limitation": "Validation checks evidence linkage and structure, not correctness of AI conclusions or independent human oversight."
+}
